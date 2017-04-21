@@ -31,7 +31,7 @@ void CHardBot::play(CProgram &prog) {
 void CHardBot::_getCritBoxes(t_grid grid) {
 	_resetPrio();
 
-	// Prios in den Horizontalen prüfen
+	// Prios in den Horizontalen prÃ¼fen
 	for (int i = 0; i < 3; i++) {
 		if (!_checkForSym(grid.at(i), *_symbol)) {
 			for (int j = 0; j < 3; j++) {
@@ -42,7 +42,7 @@ void CHardBot::_getCritBoxes(t_grid grid) {
 		}
 	}
 	
-	// Prios in den Vertikalen prüfen
+	// Prios in den Vertikalen prÃ¼fen
 	for (int i = 0; i < 3; i++) {
 		if (!_checkForSym(getGridVer(grid, i), *_symbol)) {
 			for (int j = 0; j < 3; j++) {
@@ -53,7 +53,7 @@ void CHardBot::_getCritBoxes(t_grid grid) {
 		}
 	}
 
-	// Prios in den Diagonalen prüfen
+	// Prios in den Diagonalen prÃ¼fen
 
 	// LU-RD Diagonale
 	if (!_checkForSym(getDiaLU(grid), *_symbol)) {
@@ -64,7 +64,7 @@ void CHardBot::_getCritBoxes(t_grid grid) {
 		}
 	}
 
-	// LD-RD Diagonale
+	// LD-RU Diagonale
 	if (!_checkForSym(getDiaRU(grid), *_symbol)) {
 		if (getDiaRU(grid).at(0) == NONE)
 			_prioVals->at(0).at(2) += _getAddValue(grid, 2, 0);
@@ -94,7 +94,7 @@ void CHardBot::_getCritBoxes(t_grid grid) {
 }
 
 // -- _getEnemy --
-// Methode gib das Zeichen des Gegners zurück
+// Methode gib das Zeichen des Gegners zurÃ¼ck
 //
 char CHardBot::_getEnemy() {
 	return *_symbol == PL_1 ? PL_2 : PL_1;
