@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{82627a98-d71d-4670-ac17-745bbd6bb09c}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>RPi_TicTacToe</RootNamespace>
+    <MinimumVisualStudioVersion>15.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Raspberry</TargetLinuxPlatform>
+    <LinuxProjectType>{8748239F-558C-44D1-944B-07B09C35B330}</LinuxProjectType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <ConfigurationType />
+    <RemoteRootDir>~/projects/SenseHat</RemoteRootDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <Link>
+      <LibraryDependencies>wiringPi</LibraryDependencies>
+    </Link>
+    <RemotePostBuildEvent>
+      <Command>gpio export 17 out</Command>
+      <Message>export pin 17 using the gpio utility so that we can execute the blink program without sudo</Message>
+    </RemotePostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <Link>
+      <LibraryDependencies>wiringPi</LibraryDependencies>
+    </Link>
+    <RemotePostBuildEvent>
+      <Command>gpio export 17 out</Command>
+      <Message>export pin 17 using the gpio utility so that we can execute the blink program without sudo</Message>
+    </RemotePostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CAnalyse.cpp" />
+    <ClCompile Include="CEasyBot.cpp" />
+    <ClCompile Include="CEndState.cpp" />
+    <ClCompile Include="CGlobalData.cpp" />
+    <ClCompile Include="CGrid.cpp" />
+    <ClCompile Include="CGridRenderer.cpp" />
+    <ClCompile Include="CHardBot.cpp" />
+    <ClCompile Include="CJoystick.cpp" />
+    <ClCompile Include="CLEDMatrix.cpp" />
+    <ClCompile Include="CMiddleBot.cpp" />
+    <ClCompile Include="CPlayState.cpp" />
+    <ClCompile Include="CProgram.cpp" />
+    <ClCompile Include="CRealPlayer.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CAnalyse.hpp" />
+    <ClInclude Include="CEasyBot.hpp" />
+    <ClInclude Include="CEndState.hpp" />
+    <ClInclude Include="CGlobalData.hpp" />
+    <ClInclude Include="CGrid.hpp" />
+    <ClInclude Include="CGridRenderer.hpp" />
+    <ClInclude Include="CHardBot.hpp" />
+    <ClInclude Include="CJoystick.hpp" />
+    <ClInclude Include="CLEDMatrix.hpp" />
+    <ClInclude Include="CMiddleBot.hpp" />
+    <ClInclude Include="CPlayState.hpp" />
+    <ClInclude Include="CProgram.hpp" />
+    <ClInclude Include="CProgState.hpp" />
+    <ClInclude Include="CRealPlayer.hpp" />
+    <ClInclude Include="CStaticTools.hpp" />
+    <ClInclude Include="IPlayer.hpp" />
+  </ItemGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>H:\xX_LIBs_Xx\C++\boost\boost_1_64_0\boost;H:\xX_LIBs_Xx\C++\SFML\2.4.0\SFML2.4.0 VS15\include;H:\xX_LIBs_Xx\C++\RPi_Includes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>-lsfml-graphics -lsfml-window  -lsfml-system -pthread %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

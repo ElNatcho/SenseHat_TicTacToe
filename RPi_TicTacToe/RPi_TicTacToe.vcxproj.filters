@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="CLEDMatrix.cpp">
+      <Filter>LED_Matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="CGrid.cpp">
+      <Filter>TicTacToe_CORE\CGrid</Filter>
+    </ClCompile>
+    <ClCompile Include="CAnalyse.cpp">
+      <Filter>TicTacToe_CORE\Analyse</Filter>
+    </ClCompile>
+    <ClCompile Include="CGridRenderer.cpp">
+      <Filter>TicTacToe_CORE\CGrid</Filter>
+    </ClCompile>
+    <ClCompile Include="CProgram.cpp">
+      <Filter>Program</Filter>
+    </ClCompile>
+    <ClCompile Include="CRealPlayer.cpp">
+      <Filter>TicTacToe_CORE\Player\RealPlayer</Filter>
+    </ClCompile>
+    <ClCompile Include="CJoystick.cpp">
+      <Filter>Joystick</Filter>
+    </ClCompile>
+    <ClCompile Include="CGlobalData.cpp">
+      <Filter>CGlobalData</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayState.cpp">
+      <Filter>Gamestates</Filter>
+    </ClCompile>
+    <ClCompile Include="CEndState.cpp">
+      <Filter>Gamestates</Filter>
+    </ClCompile>
+    <ClCompile Include="CEasyBot.cpp">
+      <Filter>TicTacToe_CORE\Player\BotEinfach</Filter>
+    </ClCompile>
+    <ClCompile Include="CMiddleBot.cpp">
+      <Filter>TicTacToe_CORE\Player\BotMittel</Filter>
+    </ClCompile>
+    <ClCompile Include="CHardBot.cpp">
+      <Filter>TicTacToe_CORE\Player\BotSchwer</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="TicTacToe_CORE">
+      <UniqueIdentifier>{0296d6b6-615c-49a6-b8e9-4caa77bff1cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LED_Matrix">
+      <UniqueIdentifier>{e1cddcd8-3e2f-404e-8e61-3cadf7cda31e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TicTacToe_CORE\CGrid">
+      <UniqueIdentifier>{4fc85f21-5b69-4a5b-846e-f76b4ffbb2de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TicTacToe_CORE\Analyse">
+      <UniqueIdentifier>{ca136090-7e45-4648-9964-d4f5b9acde4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TicTacToe_CORE\Player">
+      <UniqueIdentifier>{c9ae1891-f85e-487a-9f74-2e608f18bcf7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TicTacToe_CORE\Player\RealPlayer">
+      <UniqueIdentifier>{0b956dd5-6401-4258-8865-dee1287a5984}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TicTacToe_CORE\Player\BotEinfach">
+      <UniqueIdentifier>{ffa8907a-b713-457b-8805-88661ae1cdc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Joystick">
+      <UniqueIdentifier>{71c3b082-ce01-4f98-8236-3b769509c822}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CGlobalData">
+      <UniqueIdentifier>{84b50432-656c-42a1-80c7-e3443722d9e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gamestates">
+      <UniqueIdentifier>{ece7711d-9f74-4ce8-9f92-1c1e0ce457e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Program">
+      <UniqueIdentifier>{4aa82141-0c6c-4ef5-a954-815eaecccde1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TicTacToe_CORE\Player\BotMittel">
+      <UniqueIdentifier>{5bd6ccf6-e8d9-4d8c-a7bf-923bb2d68289}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TicTacToe_CORE\Player\BotSchwer">
+      <UniqueIdentifier>{ec6fad34-a691-40a4-9c51-d091358b83d7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CStaticTools.hpp" />
+    <ClInclude Include="CLEDMatrix.hpp">
+      <Filter>LED_Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="CGrid.hpp">
+      <Filter>TicTacToe_CORE\CGrid</Filter>
+    </ClInclude>
+    <ClInclude Include="CAnalyse.hpp">
+      <Filter>TicTacToe_CORE\Analyse</Filter>
+    </ClInclude>
+    <ClInclude Include="CGridRenderer.hpp">
+      <Filter>TicTacToe_CORE\CGrid</Filter>
+    </ClInclude>
+    <ClInclude Include="CProgram.hpp">
+      <Filter>Program</Filter>
+    </ClInclude>
+    <ClInclude Include="IPlayer.hpp">
+      <Filter>TicTacToe_CORE\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CRealPlayer.hpp">
+      <Filter>TicTacToe_CORE\Player\RealPlayer</Filter>
+    </ClInclude>
+    <ClInclude Include="CJoystick.hpp">
+      <Filter>Joystick</Filter>
+    </ClInclude>
+    <ClInclude Include="CGlobalData.hpp">
+      <Filter>CGlobalData</Filter>
+    </ClInclude>
+    <ClInclude Include="CProgState.hpp">
+      <Filter>Gamestates</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlayState.hpp">
+      <Filter>Gamestates</Filter>
+    </ClInclude>
+    <ClInclude Include="CEndState.hpp">
+      <Filter>Gamestates</Filter>
+    </ClInclude>
+    <ClInclude Include="CEasyBot.hpp">
+      <Filter>TicTacToe_CORE\Player\BotEinfach</Filter>
+    </ClInclude>
+    <ClInclude Include="CMiddleBot.hpp">
+      <Filter>TicTacToe_CORE\Player\BotMittel</Filter>
+    </ClInclude>
+    <ClInclude Include="CHardBot.hpp">
+      <Filter>TicTacToe_CORE\Player\BotSchwer</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
